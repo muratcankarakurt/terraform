@@ -59,10 +59,10 @@ terraform apply
 ```
 > You will be prompted to approve terraform apply command. Type `yes`
 
->>>
-`eks-cluster.tf` You can configure your cluster_version, tags, instance_types and how many ec2 instances you want.
-`vpc.tf` You can change the VPC configuration. By default, this tutorial creates a VPC with 10.0.0.0/16 network.
-`jenkins.tf` This file creates Jenkins server on EKS with the desired configurations. You may also customize this one.
-`outputs.tf` You can customize the output of terraform script in this file. For example I have added the jenkins admin password in the output.
->>>
+
+>`eks-cluster.tf` You can configure your cluster_version, tags, instance_types and how many ec2 instances you want.
+>`vpc.tf` You can change the VPC configuration. By default, this tutorial creates a VPC with 10.0.0.0/16 network.
+>`jenkins.tf` This file creates Jenkins server on EKS with the desired configurations. You may also customize this one.
+>`outputs.tf` You can customize the output of terraform script in this file. For example I have added the jenkins admin password in the output.
+
 
