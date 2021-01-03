@@ -65,7 +65,7 @@ cd terraform
 
 `outputs.tf` You can customize the output of terraform script in this file. For example I have added the jenkins admin password in the output.
 
-
+Run the following commands to create your EKS Cluster:
 ```shell
 # Initializing terraform workspace and downloading required providers.
 terraform init
@@ -73,3 +73,5 @@ terraform init
 terraform apply
 ```
 > You will be prompted to approve terraform apply command. Type `yes`
+
+>>This operation may take about 10-15 mins.
