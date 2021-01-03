@@ -72,6 +72,6 @@ terraform init
 # Applying changes on AWS.
 terraform apply
 ```
-> You will be prompted to approve terraform apply command. Type `yes`
+>You will be prompted to approve terraform apply command. Type `yes`
 
->>This operation may take about 10-15 mins.
+>This operation may take about 10-15 mins.
