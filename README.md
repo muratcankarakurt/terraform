@@ -37,7 +37,7 @@ You may create below two files to complete AWS CLI configuration:
 region=us-east-1
 ```
 or try `aws configure` to complete it on the command line interactively.
-```
+```console
 AWS Access Key ID [None]: YOUR_AWS_ACCESS_KEY_ID
 AWS Secret Access Key [None]: YOUR_AWS_SECRET_ACCESS_KEY
 Default region name [None]: YOUR_AWS_REGION
@@ -52,7 +52,7 @@ I have followed up official tutorials of HashiCorp. Here is the link for the ext
 
 [Scripts in Hashicorp's github repo](https://github.com/hashicorp/learn-terraform-provision-eks-cluster)
 
-```shell
+```console
 git clone https://github.com/muratcankarakurt/terraform.git
 cd terraform
 ```
@@ -66,7 +66,7 @@ cd terraform
 `outputs.tf` You can customize the output of terraform script in this file. For example I have added the jenkins admin password in the output.
 
 Run the following commands to create your EKS Cluster:
-```shell
+```console
 # Initializing terraform workspace and downloading required providers.
 terraform init
 # Applying changes on AWS.
@@ -89,7 +89,7 @@ Happy automating!
 
 ## Cleanup the playground
 Do not forget to delete AWS resources. You will be ```charged``` for this configurations. To delete all the resources you have created run the following command:
-```shell
+```console
 terraform destroy
 ```
 
@@ -107,7 +107,7 @@ If you want to do some `CI/CD` operations on Jenkins that you recently set up, y
 
 Before you go run this command to use helm effectively in Jenkins. That will create a service account named `helm` and grants required permissions.
 
-```shell
+```console
 kubectl apply -f helm-user-rbac.yaml
 ```
 
