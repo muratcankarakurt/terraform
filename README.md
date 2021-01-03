@@ -95,11 +95,13 @@ terraform destroy
 
 ## Issues and Errors
 
->You might have an issue with aws-auth config map while running terraform destroy command. You may simply delete configmap block in terraform.state file and re-run terraform destroy.
+- You might have an issue with aws-auth config map while running terraform destroy command. You may simply delete configmap block in terraform.state file and re-run terraform destroy.
 
-`Error: Delete "http://localhost/api/v1/namespaces/kube-system/configmaps/aws-auth": dial tcp [::1]:80: connect: connection refused`
+```
+Error: Delete "http://localhost/api/v1/namespaces/kube-system/configmaps/aws-auth": dial tcp [::1]:80: connect: connection refused
+```
 
->Some resources on AWS cannot be deleted sometimes. You can delete them manually from AWS and re-run destroy command. I had this issue with ELB, Internet Gateway and VPC.
+- Sometimes AWS resources cannot be deleted. You can delete them manually and re-run destroy command. I had this issue with ELB, Internet Gateway and VPC.
 
 ## Play with Jenkins
 
