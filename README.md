@@ -49,6 +49,7 @@ Default output format [None]: json
 I have followed up official tutorials of HashiCorp. Here is the link for the external documentations and scripts:
 
 [Provision an EKS Cluster (AWS)](https://learn.hashicorp.com/tutorials/terraform/eks)
+
 [Scripts in Hashicorp's github repo](https://github.com/hashicorp/learn-terraform-provision-eks-cluster)
 
 ```shell
