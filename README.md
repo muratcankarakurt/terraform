@@ -75,3 +75,40 @@ terraform apply
 >You will be prompted to approve terraform apply command. Type `yes`
 
 >This operation may take about 10-15 mins.
+
+## Logging into Jenkins on EKS
+
+After the script completes running, you will see an output of terraform. Copy the value of `jenkins_password` from the output. You can find your public address from AWS Console following these steps:
+- Select `EC2` under Compute menu.
+- From the left menu, select `Load Balancers` under Load Balancing
+- Cilck the related load balancer. You will find the `DNS name` in the Basic Configuration section.
+
+Type `http://<YOUR_LOADBALANCER_ADDRESS>:8080` in browser. Use `admin` as the user and the password from the terraform output.
+
+Happy automating!
+
+## Cleanup the playground
+Do not forget to delete AWS resources. You will be ```charged``` for this configurations. To delete all the resources you have created run the following command:
+```shell
+terraform destroy
+```
+
+## Issues and Errors
+
+>You might have an issue with aws-auth config map while running terraform destroy command. You may simply delete configmap block in terraform.state file and re-run terraform destroy.
+
+`Error: Delete "http://localhost/api/v1/namespaces/kube-system/configmaps/aws-auth": dial tcp [::1]:80: connect: connection refused`
+
+>Some resources on AWS cannot be deleted sometimes. You can delete them manually from AWS and re-run destroy command. I had this issue with ELB, Internet Gateway and VPC.
+
+## Play with Jenkins
+
+If you want to do some `CI/CD` operations on Jenkins that you recently set up, you may check my `sampletomcat` repo. Find the link in the bottom of the page.
+
+Before you go run this command to use helm effectively in Jenkins. That will create a service account named `helm` and grants required permissions.
+
+```shell
+kubectl apply -f helm-user-rbac.yaml
+```
+
+## Next: [Deploying a Sample Application on EKS using Jenkins and Helm](https://github.com/muratcankarakurt/sampletomcat)
