@@ -67,7 +67,9 @@ cd terraform
 
 
 ```shell
+# Initializing terraform workspace and downloading required providers.
 terraform init
+# Applying changes on AWS.
 terraform apply
 ```
 > You will be prompted to approve terraform apply command. Type `yes`
